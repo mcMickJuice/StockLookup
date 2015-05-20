@@ -53,7 +53,11 @@
 		}
 
 		function init(){
-			getQuotes();
+			if($stateParams.symbol){ //detail page
+				getQuoteInfo($stateParams.symbol);
+			}else{
+				getQuotes();
+			}
 		}
 		init();
 
