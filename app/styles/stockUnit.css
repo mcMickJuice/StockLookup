@@ -1,0 +1,56 @@
+.stock-unit-container {
+  border: 1px solid gray;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.price {
+  font-weight: bolder;
+  font-size: 45px;
+  position: relative;
+  display: inline-block;
+}
+.price-details {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.price-details > div {
+  margin-bottom: 10px;
+}
+.ticker {
+  padding-top: 5px;
+}
+.ticker > div {
+  transform: rotate(90deg);
+  font-weight: bolder;
+  font-size: 40px;
+}
+.emphasis {
+  font-weight: bolder;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 100%;
+  top: 30%;
+  z-index: 100;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.up {
+  color: green;
+}
+.up:after {
+  border-bottom: 10px solid green;
+}
+.down {
+  color: red;
+}
+.down:after {
+  border-top: 10px solid red;
+}

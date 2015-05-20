@@ -1,0 +1,46 @@
+<div>
+	<h4>Test Stock Service</h4>
+	{{ctrl.title}}
+
+	<div>
+		<h4>Lookup Stock Symbol</h4>
+		<button class="btn btn-default" ng-click="lookupSymbols(lookup1)">
+				Lookup
+			</button>
+		<div class="input-group">
+			<span class="input-group-addon" id="qAddon">?</span>
+			<input type="text" ng-model="lookup1" class="form-control" aria-describedby="qAddon"/>
+		</div>
+		<pre>
+			{{ctrl.symResults | json}}
+		</pre>
+		<div ng-repeat="c in ctrl.symResults">
+			{{c.Symbol}}
+		</div>
+	</div>
+	<div>
+		<h4>Lookup Quote</h4>
+		<button class="btn btn-default" ng-click="lookupQuote(lookup2)">
+			Lookup
+		</button>
+		<div class="input-group">
+		<span class="input-group-addon" id="qAddon2">
+			?
+		</span>
+		<input type="text" class="form-control" aria-describedby="qAddon2" ng-model="lookup2">
+		</div>
+		<pre>
+			{{ctrl.quoteResults}}
+		</pre>
+	</div>
+	<div>
+		<h4>Lookup ChartData</h4>
+		<button class="btn btn-default" ng-click="lookupChartData(lookup3)">Lookup</button>
+		<div class="input-group">
+			<span class="input-group-addon" id="qAddon3">?</span>
+			<input type="text" aria-describedby="qAddon3" ng-model="lookup3" class="form-control"></div>
+		<pre>
+			{{ctrl.chartDataResults}}
+		</pre>
+	</div>
+</div>

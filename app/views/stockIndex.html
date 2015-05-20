@@ -1,0 +1,47 @@
+<div class="container">
+
+	<div class="input-group">
+		<label for="">
+			
+		</label>
+		<input type="text" class="form-control" ng-model="sym"/>
+		<button class="btn btn-primary" ng-click="lookupQuote(sym)">Lookup Quote</button>
+	</div>
+	<div class="row">
+	<a ui-sref="stocks.detail/MASI">Click me</a>
+		<div class="stock-unit-container col-sm-4" ng-repeat="quote in ctrl.quotes">
+	            <div class="row">
+	              <div class="price-info col-xs-10">
+	                <div class="price arrow" 
+	                ng-class="{up: quote.currentPrice.isUp, down: !quote.currentPrice.isUp}">
+	                {{quote.currentPrice.price}}</div>
+	                <div class="price-details">
+	                  <div class="row">
+	                    <span class="col-xs-6">
+	                      High:
+	                    </span>
+	                    <span class="change-price col-xs-6"> {{quote.high}}</span>
+	                  </div>
+	                  <div class="row">
+	                    <span class="col-xs-6">
+	                      Low:
+	                    </span>
+	                    <span class="change-price col-xs-6"> {{quote.low}}</span>
+	                  </div>
+	                  <div class="row">
+	                    <span class="col-xs-6">
+	                      Change:
+	                    </span>
+	                    <span class="change-price col-xs-6" 
+	                    ng-class="{up: quote.change.isUp, down: !quote.change.isUp}"> {{quote.change.price}}</span>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="ticker col-xs-2">
+	                <div>{{quote.symbol}}</div>
+	              </div>
+	            </div>
+	          </div>
+	</div>
+	
+</div>
