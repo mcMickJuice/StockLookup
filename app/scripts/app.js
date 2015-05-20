@@ -32,7 +32,7 @@ angular
   			controllerAs: 'ctrl'
   		})
       .state('stocks.detail',{
-        url:'/stocks/:symbol',
+        url:'/:symbol',
         templateUrl: 'views/stockDetail.html',
         controller: 'stockCtrl',
         controllerAs: 'ctrl'
